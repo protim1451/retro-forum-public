@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Forum</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/7081bcb9ba.js" crossorigin="anonymous"></script>
+    <!-- Daisy and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .line {
+            border-top: 1px dashed black;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        .new-title {
+            background-color: gainsboro;
+            margin-top: 7px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mx-10 md:mx-28 mt-10">
+        <div>
+            <div class="navbar">
+                <div class="flex-1">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="md:flex-none gap-5">
+                    <div class="md:flex-none gap-3">
+                        <div class="tooltip hover:tooltip-open" data-tip="Home">
+                            <i class="fa-solid fa-house bg-[#12132D08] rounded-full p-[17px]"></i>
+                        </div>
+                        <div class="tooltip hover:tooltip-open" data-tip="Edit">
+                            <i class="fa-regular fa-pen-to-square bg-[#12132D08] rounded-full p-[17px]"></i>
+                        </div>
+                        <div class="tooltip hover:tooltip-open" data-tip="Add user">
+                            <i class="fa-regular fa-user bg-[#12132D08] rounded-full p-[17px]"></i>
+                        </div>
+                        <div class="tooltip hover:tooltip-open" data-tip="Flag">
+                            <i class="fa-regular fa-flag bg-[#12132D08] rounded-full p-[17px]"></i>
+                        </div>
+                    </div>
+                    <div class="">
+                        <button class="btn bg-sky-500 text-white rounded-3xl font-bold">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner bg-gray-800 mt-10  lg:flex gap-12 rounded-lg">
+            <div class="p-4 lg:pl-24 lg:pt-24 lg:pb-24">
+                <h2 class="text-white text-5xl font-extrabold">Welcome to the
+                    <span class="text-sky-500">ReTro</span> Forum
+                </h2>
+                <p class="text-white text-xl font-normal my-8">Share your favorite opinion and win and wp <br>forum
+                    coffee mug!</p>
+
+                <label class="input input-bordered flex items-center gap-2 rounded-3xl">
+                    <input id="category-search" type="text" class="grow" placeholder="Search here anything" />
+                    <button onclick="handleSearch()" id="category-search-btn" class="btn bg-sky-500 text-white 
+                    rounded-3xl font-bold">Search</button>
+                </label>
+            </div>
+            <div class="py-8 lg:py-24">
+                <div class="bg-white p-12 flex flex-col justify-around items-centers rounded-lg space-y-6">
+                    <div class="flex justify-between">
+                        <p>Registered Users</p>
+                        <p>02</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>Forum</p>
+                        <p>03</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>Topics</p>
+                        <p>01</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>Replies</p>
+                        <p>04</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="mx-10 md:mx-28 mt-10">
+        <section class="card-container">
+            <h3 class="text-black text-4xl font-bold text-center mb-4">Let's Discuss</h3>
+            <p class="text-gray-700 font-light text-xl text-center mb-10">Yes, you can run unit tests and view the
+                results
+                directly within the app. <br>
+                The integrated testing features allow for a streamlined </p>
+            <div class="container lg:flex justify-around gap-5">
+                <div id="card">
+
+                </div>
+                <div id="title" class="mt-10 w-1/2">
+                    <div class="flex justify-around">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="latest-post-container mt-12">
+            <h3 class="text-black text-4xl font-bold text-center mb-4">Latest Post</h3>
+            <p class="text-gray-700 font-light text-xl text-center mb-10">Yes, you can run unit tests and view the
+                results
+                directly within the app. <br>
+                The integrated testing features allow for a streamlined </p>
+            <div class="bg-white ">
+                <div id="latest-container" class="p-5 lg:flex justify-between gap-5">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-800 rounded-xl mt-12">
+            <div class="lg:flex justify-between">
+                <div class="px-7 lg:px-20 flex flex-col justify-center gap-5">
+                    <h1 class="text-white text-4xl font-extrabold">Join Our Forum</h1>
+                    <p class="text-white text-[16px]">Yes, you can run unit tests and view the results directly within
+                        the app. <br>
+                        The integrated testing features allow for a streamlined</p>
+                    <button class="btn bg-sky-500 text-white rounded-3xl font-bold">Register Now</button>
+                </div>
+                <div>
+                    <img src="images/joinforum.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <div class="flex-1">
+            <img src="images/logo.png" alt="">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br>in a piece of
+                classical Latin literature from 45 BC</p>
+        </div>
+        <nav>
+            <div class="grid grid-flow-col gap-4">
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                        </path>
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg></a>
+                <a><i class="fa-brands fa-github"></i></a>
+            </div>
+        </nav>
+        <hr class="line">
+        <aside>
+            <p>Copyright © 2024 - All right reserved</p>
+        </aside>
+    </footer>
+    <!-- Js files -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
